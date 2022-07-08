@@ -4,6 +4,7 @@ class Car{
         this.y=y;
         this.width=width;
         this.height=height;
+
         this.speed=0;
         this.acceleration=0.2;
         this.maxSpeed=3;
@@ -37,7 +38,7 @@ class Car{
         if(this.speed<0){
             this.speed+=this.friction;
         }
-        if(Math.abs.apply(this.speed)<this.friction){
+        if(Math.abs(this.speed)<this.friction){
             this.speed=0;
         }
 
@@ -60,6 +61,7 @@ class Car{
         ctx.save();
         ctx.translate(this.x,this.y);
         ctx.rotate(-this.angle);
+        
         ctx.beginPath();
         ctx.rect(
             -this.width/2,
